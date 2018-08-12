@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OPI.ViewModels
 {
-
+    using GalaSoft.MvvmLight.Command;
     using System.Windows.Input;
 
     public class LoginViewModel
@@ -45,8 +45,16 @@ namespace OPI.ViewModels
         #region Commands
         public ICommand LoginCommand
         {
-            get;
-            set;
+            get
+            {
+                return new RelayCommand(Login);
+            }
+
+        }
+
+        private void Login()
+        {
+            
         }
         #endregion
     }

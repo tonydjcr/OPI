@@ -4,6 +4,7 @@ using System.Text;
 
 namespace OPI.ViewModels
 {
+
     using GalaSoft.MvvmLight.Command;
     using System.Windows.Input;
     using Xamarin.Forms;
@@ -81,6 +82,12 @@ namespace OPI.ViewModels
                     "Aceptar");
                 return;
             }
+
+            await Application.Current.MainPage.DisplayAlert(
+                    "Ok",
+                    "Ingreso",
+                    "Aceptar");
+            return;
         }
         #endregion
     }

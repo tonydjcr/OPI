@@ -5,7 +5,7 @@ using System.Text;
 namespace OPI.Infraestructure
 {
     using ViewModels;
-    class InstanceLocator
+    public class InstanceLocator
     {
         #region Properties
         public MainViewModel Main

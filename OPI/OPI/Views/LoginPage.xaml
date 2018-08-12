@@ -8,20 +8,14 @@
         <ScrollView
             BindingContext="{Binding Login}">
             <StackLayout
-            Padding="10">
-                <Label
-                    FontAttributes="Bold"
-                    FontSize="Large"
-                    HorizontalOptions="Center"
-                    TextColor="#3b5343"
-                    Text="Aplicación Muestra">
-                </Label>
+            Padding="5">
                 <Image
                     Source="logo.png"
                     WidthRequest="200">
                 </Image>
                 <Grid
-                Margin="10,0">
+                    Margin="10,0"
+                    VerticalOptions="CenterAndExpand">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*">
                         </ColumnDefinition>
@@ -48,14 +42,14 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         TextColor="#3b5343"
-                        Text="Contrasena"
+                        Text="Contraseña"
                         VerticalOptions="Center">
                     </Label>
                     <Entry
                         Grid.Row="1"
                         Grid.Column="1"
                         IsPassword="True"
-                        Placeholder="Ingrese su contrasena"
+                        Placeholder="Ingrese su contraseña"
                         Text="{Binding Contrasena, Mode=TwoWay}">
                     </Entry>
                 </Grid>
@@ -118,7 +112,8 @@
                 </Label>
                 <StackLayout
                     HorizontalOptions="Center"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal"
+                    VerticalOptions="EndAndExpand">
                     <Image
                         Source="facebook_logo.png"
                         WidthRequest="54">

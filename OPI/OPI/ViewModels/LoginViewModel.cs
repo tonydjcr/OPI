@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+using GalaSoft.MvvmLight.Command;
+using System.Windows.Input;
+using Xamarin.Forms;
+
 namespace OPI.ViewModels
 {
 
-    using GalaSoft.MvvmLight.Command;
-    using System.Windows.Input;
-    using Xamarin.Forms;
+
 
     public class LoginViewModel
     {
@@ -58,35 +60,23 @@ namespace OPI.ViewModels
         {
             if (string.IsNullOrEmpty(this.Usuario))
             {
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Debe ingresar su nombre de usuario.",
-                    "Aceptar");
+                await Application.Current.MainPage.DisplayAlert("Error","Debe ingresar su nombre de usuario.","Aceptar");
                 return;
             }
 
             if (string.IsNullOrEmpty(this.Contrasena))
             {
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Debe ingresar su contraseña.",
-                    "Aceptar");
+                await Application.Current.MainPage.DisplayAlert("Error","Debe ingresar su contraseña.","Aceptar");
                 return;
             }
 
             if (this.Usuario != "tony" || this.Contrasena != "hola")
             {
-                await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Usuario o contrasena incorrecta",
-                    "Aceptar");
+                await Application.Current.MainPage.DisplayAlert("Error","Usuario o contrasena incorrecta","Aceptar");
                 return;
             }
 
-            await Application.Current.MainPage.DisplayAlert(
-                    "Ok",
-                    "Ingreso",
-                    "Aceptar");
+            await Application.Current.MainPage.DisplayAlert("Ok","Ingreso","Aceptar");
             return;
         }
         #endregion
